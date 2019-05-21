@@ -1,0 +1,27 @@
+{
+    "name": "20.6.Develop-Todo-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "script.js",
+    "scripts": {
+        "start": "webpack --mode development",
+        "build": "webpack --mode production",
+        "build:env": "webpack --env production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MichalAW/20.6.Develop-Todo-app.git"
+    },
+    "keywords": [],
+    "author": "MichalAW michal.wanta@gmail.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MichalAW/20.6.Develop-Todo-app/issues"
+    },
+    "homepage": "https://github.com/MichalAW/20.6.Develop-Todo-app#readme",
+    "devDependencies": {
+        "webpack": "^4.31.0",
+        "webpack-cli": "^3.3.2"
+    },
+    "dependencies": {}
+}
