@@ -4,4 +4,3 @@ When creating the TodoList component, use the presentation component (constructi
 repo --> https://github.com/MichalAW/20.6.Develop-Todo-app.git
 
 site --> https://michalaw.github.io/20.6.Develop-Todo-app/
-
