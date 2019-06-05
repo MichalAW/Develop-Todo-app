@@ -1,4 +1,11 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OptimizeJsPlugin = require('optimize-js-plugin');
+const plugins = [new HtmlWebpackPlugin({
+    template: 'src/index.html',
+    filename: 'index.html',
+    inject: 'body'
+})];
 
 module.exports = {
     entry: './src/index.js',
@@ -7,7 +14,7 @@ module.exports = {
         filename: 'app.bundle.js'
     },
     module: {
-       rules: [{
+        rules: [{
                test: /\.js$/,
                loader: "babel-loader"
            },
@@ -24,7 +31,27 @@ module.exports = {
                    }
                ]
            }
-       ]
+       ],
+
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: 'src/index.html',
+                filename: 'index.html',
+                inject: 'body'
+            }),
+            new OptimizeJsPlugin({
+                sourceMap: false
+            }),
+            module.exports = (env) => {
+                if (env === 'production') {
+                    plugins.push(
+                        new OptimizeJsPlugin({
+                            sourceMap: false
+                        })
+                    )
+                }
+            plugins: plugins
+        ]
     },
     devServer: {
         contentBase: './build',
