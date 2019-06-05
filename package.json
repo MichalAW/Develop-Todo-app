@@ -1,12 +1,16 @@
 {
     "name": "20.6.Develop-Todo-app",
     "version": "1.0.0",
-    "description": "",
+    "description": "Stopwatch-ES6",
     "main": "script.js",
     "scripts": {
-        "start": "webpack-dev-server --mode=development",
+        "test:echo": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack",
+        "start:mode": "webpack-dev-server --mode=development",
         "build": "webpack --mode=production",
-        "development": "webpack --mode=development"
+        "development": "webpack --mode=development",
+        "start-dev": "webpack-dev-server",
+        "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore"
     },
     "repository": {
         "type": "git",
@@ -16,9 +20,9 @@
     "author": "MichalAW michal.wanta@gmail.com",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/MichalAW/20.6.Develop-Todo-app/issues"
+        "url": "https://github.com/MichalAW/20.6.Develop-Todo-app.git"
     },
-    "homepage": "https://github.com/MichalAW/20.6.Develop-Todo-app#readme",
+    "homepage": "https://github.com/MichalAW/20.6.Develop-Todo-app.git",
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",
