@@ -1,10 +1,18 @@
-this.state.data[{
-    id: 1,
-    text: 'clean room'
-    }, {
-    id: 2,
-    text: 'wash the dishes'
-    }, {
-    id: 3,
-    text: 'feed my cat'
-}]
+import React from 'react';
+import Todo from './Todo';
+
+class TodoList extends React.Component {
+    render() {
+        return(
+            <div>
+                {this.props.data.map((todo, index) => {
+                    return(
+                        <Todo key={index} text={todo.text} id={todo.id}/>
+                    )
+                })}
+            </div>
+        )
+    }
+}
+
+export default TodoList;
