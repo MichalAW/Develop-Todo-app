@@ -9,7 +9,7 @@ const plugins = [new HtmlWebpackPlugin({
 })];
 
 module.exports = function (env) {
-    if (env === 'production') {
+    if (env.production) {
         plugins.push(
             new OptimizeJsPlugin({
                 sourceMap: false
